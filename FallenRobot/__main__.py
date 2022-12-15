@@ -209,7 +209,7 @@ def start(update: Update, context: CallbackContext):
     else:
         update.effective_message.reply_photo(
             START_IMG,
-            caption="ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ !\n<b>ɪ ᴅɪᴅɴ'ᴛ sʟᴇᴘᴛ sɪɴᴄᴇ​:</b> <code>{}</code>".format(
+            caption="Bot Telah Aktif!\n<b>Saya tidak tidur sejak​:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -378,7 +378,9 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="Daftar Perintah", callback_data="music_"),
+                        InlineKeyboardButton(
+                            text="Menu Bantuan", callback_data="music_"
+                        ),
                         InlineKeyboardButton(
                             text="Full Perintah", url=f"https://t.me/{SUPPORT_CHAT}"
                         ),
