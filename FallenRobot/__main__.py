@@ -93,7 +93,6 @@ buttons = [
         InlineKeyboardButton(text="❓ Bantuan ❓", callback_data="fallen_"),
     ],
     [
-        InlineKeyboardButton(text="📑 Privasi 📑", callback_data="source_"),
         InlineKeyboardButton(text="📣 Pembaruan 📣", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
 ]
@@ -298,7 +297,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="🔙 kembali", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="◁", callback_data="help_back")]]
                 ),
             )
 
@@ -402,18 +401,30 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
         )
 
 
-        @run_async
+@run_async
 def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "music_":
         query.message.edit_text(
             text=f"""
-*euon ganteng* thq
+✅Play Commands:
+Available Commands = play , vplay , cplay
+ForcePlay Commands = playforce , vplayforce , cplayforce
+c stands for channel play.
+v stands for video play.
+force stands for force play.
+/play or /vplay or /cplay  - Bot will start playing your given query on voice chat or Stream live links on voice chats.
+/playforce or /vplayforce or /cplayforce -  Force Play stops the current playing track on voice chat and starts playing the searched track instantly without disturbing/clearing queue.
+/channelplay [Chat username or id] or [Disable] - Connect channel to a group and stream music on channel's voice chat from your group.
+✅Bot's Server Playlists:
+/playlist  - Check Your Saved Playlist On Servers.
+/deleteplaylist - Delete any saved music in your playlist
+/play  - Start playing Your Saved Playlist from Servers.
 """,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="◁", callback_data="source_back")]]
+                [[InlineKeyboardButton(text="🔙 kembali", callback_data="source_back")]]
             ),
         )
     elif query.data == "source_back":
