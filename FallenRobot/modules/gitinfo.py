@@ -1,6 +1,7 @@
+from aiohttp import ClientSession
 from pyrogram import filters
 
-from FallenRobot import pbot, aiohttpsession
+from FallenRobot import pbot
 from FallenRobot.utils.errors import capture_err
 
 
@@ -11,11 +12,10 @@ async def github(_, message):
         return await message.reply_text("/git username")
     username = message.text.split(None, 1)[1]
     URL = f"https://api.github.com/users/{username}"
-    async with aiohttpsession as session:
+    async with ClientSession() as session:
         async with session.get(URL) as request:
             if request.status == 404:
                 return await message.reply_text("404")
-
             result = await request.json()
             try:
                 url = result["html_url"]
@@ -40,15 +40,14 @@ async def github(_, message):
 **Location :** `{location}`
 **Followers :** `{followers}`
 **Following :** `{following}`"""
-            except Exception as e:
+            except:
                 print(str(e))
     await message.reply_photo(photo=avatar_url, caption=caption)
 
 
-__mod_name__ = "Gɪᴛʜᴜʙ"
+__mod_name__ = "Github"
 
 __help__ = """
-I will give information about github profile 
-
- ❍ /github <username>*:* Get information about a GitHub user.
+Saya akan memberikan informasi tentang profil github 
+ ❍ /github <username>*:* Dapatkan informasi tentang pengguna GitHub.
 """
