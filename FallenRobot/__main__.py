@@ -298,7 +298,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="◁", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="🔙 kembali", callback_data="help_back")]]
                 ),
             )
 
@@ -402,12 +402,9 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
         )
 
 
-@run_async
-def Source_about_callback(update: Update, context: CallbackContext):
-    query = update.callback_query
-    if query.data == "music_":
+    elif query.data == "fallen_support":
         query.message.edit_text(
-            text=f"""
+            text= """
 ✅Play Commands:
 Available Commands = play , vplay , cplay
 ForcePlay Commands = playforce , vplayforce , cplayforce
@@ -422,13 +419,24 @@ force stands for force play.
 /deleteplaylist - Delete any saved music in your playlist
 /play  - Start playing Your Saved Playlist from Servers.
 """,
-            parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
+parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙 kembali", callback_data="source_back")]]
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="Menu Bantuan", callback_data="music_"
+                        ),
+                        InlineKeyboardButton(
+                            text="Full Perintah", url=f"https://t.me/{SUPPORT_CHAT}"
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(text="🔙 Kembali", callback_data="fallen_"),
+                    ],
+                ]
             ),
         )
-    elif query.data == "source_back":
+    elif query.data == "fallen_back":
         first_name = update.effective_user.first_name
         query.message.edit_text(
             PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
