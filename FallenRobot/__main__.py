@@ -76,7 +76,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Hallo* {},
+*Hallo* {}, [👋](https://te.legra.ph/file/eab87df1e41d2ce62e52a.jpg)
 ✪ {} adalah bot manager + music.
    untuk mengelola grup anda dengan baik.
 ✪ Tekan /help untuk Bantuan.
@@ -381,7 +381,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                             text="Menu Bantuan", callback_data="music_"
                         ),
                         InlineKeyboardButton(
-                            text="Full Perintah", url=f"https://t.me/{SUPPORT_CHAT}"
+                            text="Full Perintah", url=f"https://telegra.ph/Streaming-Robot-12-17"
                         ),
                     ],
                     [
