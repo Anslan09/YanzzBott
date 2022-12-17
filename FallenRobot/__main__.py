@@ -402,28 +402,21 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
         )
 
 
-        elif query.data == "music_":
+        @run_async
+def Source_about_callback(update: Update, context: CallbackContext):
+    query = update.callback_query
+    if query.data == "source_":
         query.message.edit_text(
-            text="*๏ Menu Music.*"
-            f"\n\nKlik button di bawah.",
+            text=f"""
+*euon ganteng* thq
+""",
             parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(
-                            text="Menu Bantuan", callback_data="music_"
-                        ),
-                        InlineKeyboardButton(
-                            text="Full Perintah", url=f"https://t.me/{SUPPORT_CHAT}"
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(text="🔙 Kembali", callback_data="fallen_"),
-                    ],
-                ]
+                [[InlineKeyboardButton(text="◁", callback_data="source_back")]]
             ),
         )
-    elif query.data == "fallen_back":
+    elif query.data == "source_back":
         first_name = update.effective_user.first_name
         query.message.edit_text(
             PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
