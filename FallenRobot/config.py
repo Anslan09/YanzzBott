@@ -2,35 +2,35 @@ class Config(object):
     LOGGER = True
 
   # Get this value from my.telegram.org/apps
-    API_ID = 28014393
-    API_HASH = "4be13450374f7b2b1b1781d3c82516c4"
+    API_ID = 18696108
+    API_HASH = "270761e7fab5f5955102efcfab79725c"
 
     CASH_API_KEY = "JGI67Y9D1LGXYFSB"  # Get this value for currency converter from https://www.alphavantage.co/support/#api-key
 
     DATABASE_URL = "postgres://hwbbjtfd:g93m0jt9H-SF2v_ZRvd8ccEArQD9GuiV@arjuna.db.elephantsql.com/hwbbjtfd"  # A sql database url from elephantsql.com
 
-    EVENT_LOGS = (-1001538760013)  # Event logs channel to note down important bot level events
+    EVENT_LOGS = (-1001832806148)  # Event logs channel to note down important bot level events
 
     MONGO_DB_URI = "mongodb+srv://nana:nana@cluster0.nelglmz.mongodb.net/?retryWrites=true&w=majority"  # Get ths value from cloud.mongodb.com
 
   # Telegraph link of the image which will be shown at start command.
     START_IMG = "https://te.legra.ph/file/c8050140d444e13884b18.jpg"
 
-    SUPPORT_CHAT = "dlksyz"  # Your Telegram support group chat username where your users will go and bother you
+    SUPPORT_CHAT = "YanzzSupportt"  # Your Telegram support group chat username where your users will go and bother you
 
-    TOKEN = "5838506109:AAEOFmlD6RXaQ3VAqbCzRs3n4GubqxLkQcM"  # Get bot token from @BotFather on Telegram
+    TOKEN = "5454277535:AAH_Id_u6CFHBYm95MxnXkubd-Rub1qzWn0"  # Get bot token from @BotFather on Telegram
 
     TIME_API_KEY = "7WMA3YLV6OEB"  # Get this value from https://timezonedb.com/api
 
-    OWNER_ID = 1885301683  # User id of your telegram account (Must be integer)
+    OWNER_ID = 1141626067  # User id of your telegram account (Must be integer)
 
   # Optional fields
     BL_CHATS = []  # List of groups that you want blacklisted.
-    DRAGONS = [1885301683]  # User id of sudo users
-    DEV_USERS = [1885301683]  # User id of dev users
-    DEMONS = [1885301683]  # User id of support users
-    TIGERS = [1885301683]  # User id of tiger users
-    WOLVES = [1885301683]  # User id of whitelist users
+    DRAGONS = [1141626067]  # User id of sudo users
+    DEV_USERS = [1141626067]  # User id of dev users
+    DEMONS = [1141626067]  # User id of support users
+    TIGERS = [1141626067]  # User id of tiger users
+    WOLVES = [1141626067]  # User id of whitelist users
 
     ALLOW_CHATS = True
     ALLOW_EXCL = True
