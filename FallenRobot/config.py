@@ -11,7 +11,7 @@ class Config(object):
 
     EVENT_LOGS = (-1001538760013)  # Event logs channel to note down important bot level events
 
-    MONGO_DB_URI = "mongodb+srv://nana:nana@cluster0.nelglmz.mongodb.net/?retryWrites=true&w=majority"  # Get ths value from cloud.mongodb.com
+    MONGO_DB_URI = "mongodb+srv://nana:nana@cluster0.nelglmz.mongodb.net/?retryWrites=true&w=majority"
 
   # Telegraph link of the image which will be shown at start command.
     START_IMG = "https://te.legra.ph/file/c8050140d444e13884b18.jpg"
