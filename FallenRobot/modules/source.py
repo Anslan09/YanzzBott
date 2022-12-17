@@ -9,7 +9,7 @@ from platform import python_version as y
 from FallenRobot import pbot, OWNER_ID, BOT_NAME, BOT_USERNAME, START_IMG
 
 
-@pbot.on_message(filters.command(["repo", "source"]))
+@pbot.on_message(filters.command(["repo", "beli", "sc"]))
 async def repo(_, message: Message):
     await message.reply_photo(
         photo=START_IMG,
@@ -17,21 +17,21 @@ async def repo(_, message: Message):
 
 ɪ ᴀᴍ [{BOT_NAME}](https://t.me/{BOT_USERNAME})**
 
-**» ᴍʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ :** 𝝙𝗡𝗢𝗡𝗬𝗠𝗢𝗨𝗦
+**» ᴍʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ :** Euuon
 **» ᴩʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{y()}`
 **» ʟɪʙʀᴀʀʏ ᴠᴇʀsɪᴏɴ :** `{o}` 
 **» ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{s}` 
 **» ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ :** `{z}`
+
+Ingin deploy bot ini?
+Klik button di bawah
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "ᴅᴇᴠᴇʟᴏᴘᴇʀ", user_id=OWNER_ID
-                    ),
-                    InlineKeyboardButton(
-                        "sᴏᴜʀᴄᴇ",
-                        url="https://github.com/TheAnonymousX/FallenRobot",
+                        "Daftar",
+                        url="https://t.me/idnrobot",
                     ),
                 ]
             ]
@@ -39,4 +39,4 @@ async def repo(_, message: Message):
     )
 
 
-__mod_name__ = "Rᴇᴩᴏ"
+__mod_name__ = "Repo"
